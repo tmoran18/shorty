@@ -1,4 +1,62 @@
-body {
-	background: black;
-	color: white;
+:root {
+	--bg-white: white;
+	--bg-gray: #f0f1f6;
+	--bg-black: black;
+	--primary: #26c8bc;
+	--secondary: #426270;
+	--tertiary: #4b406b;
+	--text: #444444;
+	--text-light: #999999;
+}
+
+#hero {
+	background: var(--bg-white);
+}
+
+#inputs,
+#cards {
+	background: var(--bg-gray);
+}
+
+.container {
+	max-width: 1440px;
+	margin: auto;
+	padding: 0 120px;
+}
+
+.flex_5050 {
+	display: flex;
+	justify-content: space-between;
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	letter-spacing: 0.2px;
+}
+
+.hero_container {
+	max-width: 525px;
+}
+
+.hero_img {
+	max-width: 95%;
+}
+
+p {
+	color: var(--text-light);
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		padding: 10px;
+		text-align: center;
+	}
+	.flex_5050 {
+		flex-direction: column-reverse;
+	}
+	h1 {
+		font-size: 40px;
+	}
 }

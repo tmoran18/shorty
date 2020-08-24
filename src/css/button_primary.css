@@ -1,0 +1,15 @@
+.btn_primary {
+	border-radius: 100px;
+	padding: 16px 45px;
+	border: none;
+	color: var(--bg-white);
+	background: var(--primary);
+	font-size: 18px;
+	cursor: pointer;
+	margin: 15px 0px;
+	font-weight: 700;
+}
+
+.btn_primary:hover {
+	opacity: 0.8;
+}
