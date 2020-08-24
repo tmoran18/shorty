@@ -1,5 +1,5 @@
 import React from 'react'
-import Button_primary from './Button_primary';
+import ButtonPrimary from './ButtonPrimary';
 
 const Hero = () => {
     return (
@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="hero_container">
                 <h1>More than just shorter links</h1>
                 <p>Build your brand's recognition and get detailed insights on how your links are performing</p>
-                <Button_primary button_text={"Get Started"} />
+                <ButtonPrimary button_text={"Get Started"} />
             </div>
             <div><img className="hero_img" src="./assets/rocket_ship.png" alt=""/></div>
         </div>

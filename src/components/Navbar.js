@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/navbar.css'
-import Button_primary from './Button_primary'
+import ButtonPrimary from './ButtonPrimary'
 
 const Navbar = () => {
     return (
@@ -14,8 +14,8 @@ const Navbar = () => {
               </ul>
           </div>
           <div className="login">
-            <a href="">Login</a>
-            <Button_primary button_text="Sign Up" />
+            <a href="#">Login</a>
+            <ButtonPrimary button_text="Sign Up" />
           </div>  
         </nav>
     )
