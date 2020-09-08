@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer'
+import Hero from './components/Hero/Hero';
+import BurgerMenu from './components/BurgerMenu/BurgerMenu'
 
 function App() {
   return (
     <div className="App">
+      <BurgerMenu />
       <Navbar />
       <section id="hero">
       <Hero />

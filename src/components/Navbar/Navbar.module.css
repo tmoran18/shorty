@@ -30,3 +30,9 @@ ul li {
 .login a {
 	margin-right: 20px;
 }
+
+@media only screen and (max-width: 950px) {
+	.navbar {
+		display: none;
+	}
+}

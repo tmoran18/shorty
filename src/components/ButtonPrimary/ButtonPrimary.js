@@ -1,10 +1,10 @@
 import React from 'react'
-import '../css/button_primary.css'
+import styles from '../ButtonPrimary/ButtonPrimary.module.css'
 
 const ButtonPrimary = ({ button_text }) => {
     return (
         <div>
-            <button className="btn_primary" >{button_text}</button>
+            <button className={styles.btn_primary} >{button_text}</button>
         </div>
     )
 }

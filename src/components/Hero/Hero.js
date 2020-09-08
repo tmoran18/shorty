@@ -1,10 +1,10 @@
 import React from 'react'
-import ButtonPrimary from './ButtonPrimary';
+import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 
 const Hero = () => {
     return (
-        <div className="container flex_5050" >
-            <div className="hero_container">
+        <div>
+            <div>
                 <h1>More than just shorter links</h1>
                 <p>Build your brand's recognition and get detailed insights on how your links are performing</p>
                 <ButtonPrimary button_text={"Get Started"} />
