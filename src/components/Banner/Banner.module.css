@@ -1,0 +1,22 @@
+#banner {
+	background: #3a3053;
+	background-image: url('/assets/bg-boost-desktop.svg');
+	background-repeat: no-repeat;
+	margin-bottom: -5px;
+	min-height: 255px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#banner h2 {
+	color: white;
+	font-size: 40px;
+}
+
+@media only screen and (max-width: 950px) {
+	#banner h2 {
+		font-size: 30px;
+	}
+}

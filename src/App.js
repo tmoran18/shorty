@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
 import Hero from './components/Hero/Hero';
 import BurgerMenu from './components/BurgerMenu/BurgerMenu'
+import Banner from './components/Banner/Banner'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       </div>
       </section>
       <section id="cards"><div className="container" >Card</div></section>
-      <section id="banner"><div className="container" >Banner</div></section>
+      <Banner />
       <Footer />
     </div>
   );
