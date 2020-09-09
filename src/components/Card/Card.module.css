@@ -1,0 +1,36 @@
+#card {
+	width: 350px;
+	min-height: 280px;
+	height: auto;
+	position: relative;
+	padding: 20px;
+	background: white;
+	margin: 15px;
+}
+
+#card div:first-child {
+	display: inline-block;
+	background-color: var(--tertiary);
+	padding: 20px;
+	border-radius: 100%;
+	width: 90px;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -45px;
+}
+
+#card h3 {
+	margin: 50px 0 20px 0;
+}
+
+@media only screen and (max-width: 950px) {
+	#card div:first-child {
+		right: 135px;
+	}
+	#card {
+		text-align: center;
+	}
+}
