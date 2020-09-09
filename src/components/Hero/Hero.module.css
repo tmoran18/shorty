@@ -1,0 +1,26 @@
+#heroSection {
+	margin-top: 100px;
+}
+#heroSection h1 {
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	letter-spacing: 0.2px;
+}
+
+.hero_text_container {
+	max-width: 525px;
+}
+
+.hero_img {
+	max-width: 95%;
+}
+
+@media only screen and (max-width: 950px) {
+	#heroSection h1 {
+		font-size: 40px;
+	}
+	#heroSection p {
+		font-size: 18px;
+	}
+}

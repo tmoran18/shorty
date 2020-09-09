@@ -16,8 +16,6 @@ const BurgerMenu = () => {
       const handleResize = () => {
         // Set window width to state
         setwindowWidth({ width: window.innerWidth });
-        // Set navbar to false if window is opened
-        window.innerWidth > 950 && setMobileNavOpen(false);
       }
       
       // Add event listener
@@ -32,13 +30,17 @@ const BurgerMenu = () => {
   
     return windowWidth;
   }
-
   // Handle Navbar Hamburger click
   const handleNavClick = () => {
       // if Mobile Nav is Open - set it to closed - Else set to open
       mobileNavOpen ? setMobileNavOpen(false) : setMobileNavOpen(true);
   }
-
+  // close mobile nav on menu open
+  const handleCloseNavOnResize = () => {
+    window.innerWidth > 950 && setMobileNavOpen(false);
+  }
+  // event listener for resize to close mobile nav
+  window.addEventListener("resize", handleCloseNavOnResize);
     return (
         <div style={{ display: "flex", justifyContent: "center"}}>
             <div className={styles.logo}>Shorty</div>

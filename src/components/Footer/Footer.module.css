@@ -1,7 +1,45 @@
+.container {
+	max-width: 1440px;
+	margin: auto;
+	padding: 0 120px;
+}
 .footer {
-	border: 1px solid red;
-	height: 200px;
 	width: 100%;
 	background: var(--bg-black);
 	display: flex;
+	color: white;
+	justify-content: space-between;
+	padding: 50px 120px;
+}
+
+.list_title {
+	font-weight: 700;
+	color: white;
+}
+
+footer ul li {
+	font-weight: 500;
+	color: #aca9b0;
+}
+
+footer img {
+	margin: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+	.footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.footer ul {
+		margin-top: 20px;
+	}
+	.footer ul li {
+		padding: 7px;
+	}
+	.footer img:first-child {
+		margin-top: 40px;
+	}
 }

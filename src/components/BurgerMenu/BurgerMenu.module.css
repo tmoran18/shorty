@@ -52,7 +52,8 @@
 
 @media only screen and (min-width: 950px) {
 	.burger_img,
-	.logo {
+	.logo,
+	.mobile_menu_container {
 		display: none;
 	}
 }
