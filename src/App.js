@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero';
 import BurgerMenu from './components/BurgerMenu/BurgerMenu';
 import Banner from './components/Banner/Banner';
 import Card from './components/Card/Card';
+import LinkInput from './components/LinkInput/LinkInput';
 
 function App() {
 	return (
@@ -15,8 +16,8 @@ function App() {
 			<section id='hero'>
 				<Hero />
 			</section>
-			<section id='inputs'>
-				<div className='container input_container'>input</div>
+			<section id='inputs' className='container'>
+				<LinkInput />
 			</section>
 			<section className='card_container'>
 				<Card
