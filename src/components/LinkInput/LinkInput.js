@@ -6,8 +6,10 @@ import LinkCard from '../LinkCard/LinkCard';
 
 const LinkInput = () => {
 	const [data, setData] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 	const [input, setInput] = useState('');
 	const loaded = useRef(false);
+	const [count, setCount] = useState(0);
 
 	//setItems(items => [...items, 'New Item']);
 
@@ -17,8 +19,27 @@ const LinkInput = () => {
 		});
 
 		setData((data) => [...data, result.data]);
+		setCount(() => count + 1);
 		setInput('');
 	};
+
+	useEffect(() => {
+		if (count === 0) {
+			// try get Local Storage
+			// if there is no data in localStorage, set state to empty Array
+			if (localStorage.getItem('data') === null) {
+				setData([]);
+			} else {
+				const retrievedData = JSON.parse(localStorage.getItem('data'));
+				setData(retrievedData);
+			}
+			console.log('component did mount');
+		} else {
+			// set Local Storage
+			localStorage.setItem('data', JSON.stringify(data));
+			console.log('component Did Update');
+		}
+	}, [count]);
 
 	return (
 		<div>
@@ -33,8 +54,8 @@ const LinkInput = () => {
 				<button onClick={fetchLink}>Shorten It!</button>
 				<span>Please add a link (must have http or https)</span>
 			</div>
-			{data.map((link) => (
-				<LinkCard url={link.url} hashid={link.hashid} />
+			{data.map((link, index) => (
+				<LinkCard key={index} url={link.url} hashid={link.hashid} />
 			))}
 		</div>
 	);
