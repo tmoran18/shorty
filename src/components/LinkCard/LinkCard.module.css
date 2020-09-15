@@ -1,28 +1,35 @@
 #linkCard_container {
-  background: white;
-  border-radius: 5px;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+	background: white;
+	border-radius: 5px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
 }
 
 #linkCard_container button {
-  padding: 10px 30px;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  background: var(--primary);
-  font-weight: 600;
-  margin-left: 20px;
-  cursor: pointer;
+	padding: 10px 0px;
+	min-width: 100px;
+	border-radius: 5px;
+	color: white;
+	border: none;
+	font-weight: 600;
+	margin-left: 20px;
+	cursor: pointer;
 }
 
 #linkCard_container button:hover {
-  background: #2de7db;
+	opacity: 0.8;
 }
 
 .link_url {
-  color: var(--primary);
+	color: var(--primary);
+}
+
+#linkCard_container .primary_btn_color {
+	background: var(--primary);
+}
+#linkCard_container .tertiary_btn_color {
+	background: var(--tertiary);
 }
