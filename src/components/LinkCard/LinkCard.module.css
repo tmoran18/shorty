@@ -33,3 +33,32 @@
 #linkCard_container .tertiary_btn_color {
 	background: var(--tertiary);
 }
+
+@media only screen and (max-width: 950px) {
+	#linkCard_container,
+	#linkCard_container div:last-child {
+		display: flex;
+		flex-direction: column;
+		padding: 0px;
+		align-items: flex-start;
+	}
+	#linkCard_container div:first-child {
+		margin-bottom: 10px;
+		padding: 20px;
+		border-bottom: 1.5px solid #e2e2e2;
+		width: 100%;
+		text-align: left;
+	}
+	#linkCard_container div:last-child span {
+		padding: 10px 0px 10px 20px;
+		margin-bottom: 10px;
+	}
+	#linkCard_container div:last-child {
+		width: 100%;
+	}
+	#linkCard_container div:last-child button {
+		width: 90%;
+		align-self: center;
+		margin: 0px 0px 20px 0px;
+	}
+}
