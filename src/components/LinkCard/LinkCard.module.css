@@ -1,8 +1,28 @@
 #linkCard_container {
-	background: white;
-	padding: 25px;
-	border-radius: 5px;
-	margin-top: 30px;
-	display: flex;
-	justify-content: space-between;
+  background: white;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#linkCard_container button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  background: var(--primary);
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#linkCard_container button:hover {
+  background: #2de7db;
+}
+
+.link_url {
+  color: var(--primary);
 }
