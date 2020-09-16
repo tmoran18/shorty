@@ -12,9 +12,13 @@ const LinkCard = ({ url, hashid }) => {
 		}, 5000);
 	};
 
+	const truncatedURL = () => {
+		return url.length > 10 ? url.substring(0, 40) + '...' : url;
+	};
+
 	return (
 		<div id={styles.linkCard_container}>
-			<div>{url}</div>
+			<div>{truncatedURL()}</div>
 			<div>
 				<span className={styles.link_url}>{`https://rel.ink/${hashid}`}</span>
 				<button

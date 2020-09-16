@@ -7,17 +7,28 @@ const LinkInput = () => {
 	const [data, setData] = useState([]);
 	const [input, setInput] = useState('');
 	const [count, setCount] = useState(0);
+	const [isLoading, setIsloading] = useState(false);
+	const [showError, setShowError] = useState(false);
 
 	//setItems(items => [...items, 'New Item']);
 
 	const fetchLink = async () => {
-		const result = await axios.post(`https://rel.ink/api/links/`, {
-			url: input,
-		});
+		setIsloading(true);
+		try {
+			const result = await axios.post(`https://rel.ink/api/links/`, {
+				url: input,
+			});
 
-		setData((data) => [...data, result.data]);
-		setCount(() => count + 1);
-		setInput('');
+			setData((data) => [...data, result.data]);
+			setCount(() => count + 1);
+			setInput('');
+			setIsloading(false);
+		} catch (error) {
+			console.log(error);
+			setIsloading(false);
+			setShowError(true);
+			return error.repsonse;
+		}
 	};
 
 	useEffect(() => {
@@ -36,6 +47,19 @@ const LinkInput = () => {
 		}
 	}, [count]);
 
+	const showErrorMsg = () => {
+		setTimeout(() => {
+			setShowError(false);
+		}, 5000);
+		return (
+			<div className={styles.errorMsg}>
+				<span>
+					There was an error shortening your link, please check the URL is valid
+				</span>
+			</div>
+		);
+	};
+
 	return (
 		<div className='container' style={{ transform: 'translateY(-70px)' }}>
 			<div id={styles.linkInput_container}>
@@ -49,9 +73,23 @@ const LinkInput = () => {
 				<button onClick={fetchLink}>Shorten It!</button>
 				<span>Please add a link (must have http or https)</span>
 			</div>
-			{data.map((link, index) => (
-				<LinkCard key={index} url={link.url} hashid={link.hashid} />
-			))}
+			{showError && showErrorMsg()}
+
+			{isLoading ? (
+				<div className={styles.spinner}>
+					<img src='./assets/infinity_spinner.gif' width='150' alt='' />
+					<p>Shrinking your Link...</p>
+				</div>
+			) : (
+				data.map((link, index) => (
+					<LinkCard
+						key={index}
+						url={link.url}
+						hashid={link.hashid}
+						loading={isLoading}
+					/>
+				))
+			)}
 		</div>
 	);
 };
