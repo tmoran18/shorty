@@ -17,7 +17,7 @@ function App() {
 			<section id='inputs'>
 				<LinkInput />
 			</section>
-			<section id='cards_heading'>
+			<section id='cards_heading' style={{ padding: '5px' }}>
 				<h2>Advanced Statistics</h2>
 				<p>
 					Track how your links are performing across the web with our advanced
