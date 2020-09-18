@@ -19,16 +19,29 @@
 ul li {
 	list-style: none;
 	padding: 10px;
+	cursor: pointer;
+}
+
+ul li:hover {
+	opacity: 0.8;
 }
 
 .logo {
 	font-size: 40px;
 	font-weight: 700;
 	margin-right: 50px;
+	cursor: pointer;
 }
 
 .login a {
 	margin-right: 20px;
+	text-decoration: none;
+	color: var(--text);
+	cursor: pointer;
+}
+
+.login a:hover {
+	opacity: 0.8;
 }
 
 @media only screen and (max-width: 950px) {

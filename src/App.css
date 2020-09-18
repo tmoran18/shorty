@@ -11,7 +11,7 @@
 
 #inputs,
 #cards_heading,
-.card_container {
+#cards_container {
 	background: var(--bg-gray);
 }
 
@@ -33,6 +33,8 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 100px;
+	max-width: 1440px;
+	margin: auto;
 }
 
 .container {
